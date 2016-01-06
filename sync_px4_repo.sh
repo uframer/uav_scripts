@@ -42,9 +42,9 @@ else
     git submodule init
 fi
 git submodule update
-cd ${root_dir}
+cd ${target_dir}
 
-if [ -d ${px4_firmware_dir} ] ; then
+if [ -d ${px4flow_firmware_dir} ] ; then
     cd ${px4flow_firmware_dir}
     git pull || (echo "failed to pull ${px4flow_firmware_dir}" && exit 1)
 else
