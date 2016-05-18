@@ -14,8 +14,8 @@ STARTDISTCC="true"
 # Hosts are represented by a single IP Adress
 #
 
-# piggy farm: keep this empty as we deployed new logic in /etc/init.d/distcc
-ALLOWEDNETS=""
+# piggy farm: keep this as it is because we deployed new logic in /etc/init.d/distcc
+ALLOWEDNETS="127.0.0.1"
 
 #
 # Which interface should distccd listen on?
