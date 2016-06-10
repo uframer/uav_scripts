@@ -27,7 +27,7 @@ if [ -d ${px4_bootloader_dir} ] ; then
     git pull || (echo "failed to pull ${px4_bootloader_dir}" && exit 1)
 else
     git clone https://github.com/PX4/Bootloader.git ${px4_bootloader_dir}
-    cd {px4_bootloader_dir}
+    cd ${px4_bootloader_dir}
     git submodule init
 fi
 git submodule update
@@ -54,4 +54,3 @@ else
 fi
 git submodule update
 cd ${root_dir}
-
