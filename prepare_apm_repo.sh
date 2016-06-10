@@ -27,7 +27,7 @@ else
     git submodule init
 fi
 git submodule update
-${ardupilot_dir}/Tools/scripts/install-prereqs-ubuntu.sh -y
+./Tools/scripts/install-prereqs-ubuntu.sh -y
 cd ${target_dir}
 
 echo "You can build for rover by: "
@@ -42,7 +42,11 @@ if [ -d ${apm_planner_dir} ] ; then
     git pull || (echo "failed to pull ${apm_planner_dir}" && exit 1)
 else
     git clone https://github.com/ArduPilot/apm_planner.git ${apm_planner_dir}
+    cd ${apm_planner_dir}
     git submodule init
 fi
 git submodule update
 cd ${target_dir}
+
+# sync done
+cd ${root_dir}
