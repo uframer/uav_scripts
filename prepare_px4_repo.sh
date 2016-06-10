@@ -16,8 +16,9 @@ sudo apt remove modemmanager
 sudo apt install python-argparse git wget zip python-empy qtcreator cmake \
     genromfs -y
 # for simulation
-sudo apt install ant protobuf-compiler libeigen3-dev libopencv-dev \
-    default-jdk default-jre clang lldb -y
+sudo apt install ant protobuf-compiler libeigen3-dev libopencv-dev default-jdk \
+    default-jre clang lldb python-serial openocd flex bison libncurses5-dev \
+    autoconf texinfo libftdi-dev libtool zlib1g-dev gcc-arm-none-eabi -y
 
 px4_hardware_dir="px4_hardware"
 px4_bootloader_dir="px4_bootloader"
