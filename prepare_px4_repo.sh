@@ -50,9 +50,8 @@ if [ -d ${px4_firmware_dir} ] ; then
 else
     git clone https://github.com/PX4/Firmware.git ${px4_firmware_dir}
     cd ${px4_firmware_dir}
-    git submodule init
 fi
-git submodule update
+git submodule update --init --recursive
 cd ${target_dir}
 
 if [ -d ${px4flow_firmware_dir} ] ; then
