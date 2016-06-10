@@ -9,6 +9,16 @@ mkdir -p ${target_dir}
 cd ${target_dir}
 # make target_dir an absolute path
 target_dir=$PWD
+
+# remove modemmanager for conflicts of serial tools
+sudo apt remove modemmanager
+# for building
+sudo apt install python-argparse git wget zip python-empy qtcreator cmake \
+    genromfs -y
+# for simulation
+sudo apt install ant protobuf-compiler libeigen3-dev libopencv-dev \
+    default-jdk default-jre clang lldb -y
+
 px4_hardware_dir="px4_hardware"
 px4_bootloader_dir="px4_bootloader"
 px4_firmware_dir="px4_firmware"
@@ -53,4 +63,7 @@ else
     git submodule init
 fi
 git submodule update
+cd ${target_dir}
+
+# sync done
 cd ${root_dir}
