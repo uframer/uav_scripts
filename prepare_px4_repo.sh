@@ -64,6 +64,8 @@ else
 fi
 git submodule update
 cd ${target_dir}
+echo "You can build PX4Flow by:"
+echo "make archives && make all"
 
 # sync done
 cd ${root_dir}
